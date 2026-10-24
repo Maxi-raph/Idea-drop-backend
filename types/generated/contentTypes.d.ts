@@ -462,6 +462,7 @@ export interface ApiIdeaIdea extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::idea.idea'> &
       Schema.Attribute.Private;
+    position: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'Title'> & Schema.Attribute.Required;
     summary: Schema.Attribute.Text & Schema.Attribute.Required;
